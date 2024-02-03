@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Protest Revolution';
 }
 body{
     width: 100%;
@@ -10,43 +13,90 @@ body{
     justify-content: center;
     align-items: center;
     background: var(--body-bg);
-    transition: background .3s linear;
+    background-image: url('./img/bg.jpg');
 }
-#game-section{
-    width: 700px;
-    height: 600px;
-    background: gray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
+#game{
+    position: relative;
+    width: 93%;
+    height: 100%;
+    max-width: 100%;
 }
-#user-data{
-    background: white;
-    width: 250px;
-    height: 50px;
-    padding: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+#info{
+    position: absolute;
+    z-index: 60;
+    top: 10px;
+    width: 400px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
-    border-radius: 7px;
-    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.116);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+}
+#info-item{
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    font-size: 18px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 24%;
+}
+#popap{
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    background: rgba(0, 0, 0, 0.87);
+}
+.win{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
-#play-section{
-    width: 680px;
-    height: 490px;
-    background: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    position: relative;
+h3{
+    font-size: 24px;
+    font-family: Minecraft, sans-serif;
+    color: #fff;
+    margin-bottom: 25px;
 }
-#basket{
-    width: 100px;
-    height: 100px;
-    bottom: 0;
-    left: 50%;
+#username{
+    font-family: Minecraft, sans-serif;
+    font-size: 18px;
+    outline: none;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+#start{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#start:hover{
+    background: lightgreen;
+}
+.basket{
     position: absolute;
-    background: red;
+    left: 50%;
+    transform: translateX(-70%);
+    width: 100px;
+    bottom: 28px;
+    z-index: 60;
+}
+.fruit{
+    top: 0;
+    position: absolute;
+    transform: translateX(-70%);
+    width: 60px;
+    background: none;
 }

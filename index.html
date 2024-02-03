@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
+    
 </head>
 <body>
-    <section id="game-section">
-        <span id="user-data">
-            <span id="name">Ivan</span>
-            <span id="score">score: </span>
-            <span id="health">health: </span>
-            <span id="time"></span>
-        </span>
-        <div id="play-section">
-            <img src="./img/basket.jpg" alt="" id="basket">
+    <div id="popap">
+        <div class="win">
+            <h3>Введите ваше имя для начала игры</h3>
+            <input type="text" id="username" autocomplete="off">
+            <button id="start">Начать игру</button>
         </div>
-    </section>
+    </div>
+    <div id="info">
+        <div id="info-item">
+            <span>name</span>
+            <span id="name">Ivan</span>
+        </div>
+        <div id="info-item">
+            <span>score</span>
+            <span id="score">0</span>
+        </div>
+        <div id="info-item">
+            <span>health</span>
+            <span id="health">5</span>
+        </div>
+        <div id="info-item">
+            <span>time</span>
+            <span id="time">00:00</span>
+        </div>
+    </div>
+    <div id="game"></div>
+    <script src="./script.js"></script>
 </body>
 </html>
